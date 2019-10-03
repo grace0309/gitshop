@@ -8,10 +8,21 @@ fetch(TRADE_GECKO_URL, {
 }).then(response => response.json())
 .then((jsonData) => {
   jsonData.products.forEach((data) => {
-    const name = data.name;
-    const brand = data.brand;
-    console.log(name);
-    console.log(brand);
+    const title = data.name;
+    const vendor = data.brand;
+    const product_type = data.product_type;
+    const description = data.description;
+    const tag = data.tags;
+    console.log(title);
+    console.log(vendor);
+    console.log(product_type);
+    console.log(description);
+    console.log(tag);
   });
 });
 
+//       "title": "Burton Custom Freestyle 151",
+//       "body_html": "<strong>Good snowboard!</strong>",
+//       "vendor": "Burton",
+//       "product_type": "Snowboard",
+//       "tags": "Barnes & Noble, John's Fav, \"Big Air\""
